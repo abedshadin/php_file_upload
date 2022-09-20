@@ -47,4 +47,4 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')
   }
 }
 $_SESSION['message'] = $message;
-header("Location: up.php");
+header("Location: index.php");
