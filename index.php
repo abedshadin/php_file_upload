@@ -24,14 +24,9 @@ session_start();
   </style>
 
 <body>
-  <?php
-    if (isset($_SESSION['message']) && $_SESSION['message'])
-    {
-      printf('<b>%s</b>', $_SESSION['message']);
-      unset($_SESSION['message']);
-    }
-  ?>
-  <center>
+<center>
+ 
+
     <div class="f_border">
   <form method="POST" action="upload.php" enctype="multipart/form-data">
     <div>
@@ -45,6 +40,14 @@ session_start();
 <br>
     <input class="btn btn-primary btn-file input_form" type="submit" name="uploadBtn" value="Upload" />
   </form>
+  <br>
+  <?php
+    if (isset($_SESSION['message']) && $_SESSION['message'])
+    {
+      printf('<b>%s</b>', $_SESSION['message']);
+      unset($_SESSION['message']);
+    }
+  ?>
   </div>
   </center>
 </body>
