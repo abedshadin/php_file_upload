@@ -18,7 +18,7 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')
     $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
 
     // check if file has one of the following extensions
-    $allowedfileExtensions = array('jpg', 'gif', 'png', 'zip', 'txt', 'xls', 'doc');
+    $allowedfileExtensions = array('jpg', 'gif', 'png', 'zip', 'txt', 'xls', 'doc', 'mp4', 'mp3', 'rar');
 
     if (in_array($fileExtension, $allowedfileExtensions))
     {
@@ -47,4 +47,4 @@ if (isset($_POST['uploadBtn']) && $_POST['uploadBtn'] == 'Upload')
   }
 }
 $_SESSION['message'] = $message;
-header("Location: index.php");
+header("Location: up.php");
